@@ -13,10 +13,4 @@ export default function Notification({ success, message }) {
       {message}
     </div>
   )
-
-  // return (
-  //   <div className="error-notification">
-  //     {message}
-  //   </div>
-  // )
 }

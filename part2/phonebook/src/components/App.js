@@ -4,7 +4,6 @@ import NewPersonForm from './NewPersonForm';
 import Phonebook from './Phonebook';
 import Search from './Search';
 import phonebookService from '../services/phonebook';
-import SuccessNotification from './SuccessNotification';
 import Notification from './Notification';
 
 export default function App() {
@@ -12,7 +11,6 @@ export default function App() {
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
   const [search, setSearch] = useState('');
-  const [successMessage, setSuccessMessage] = useState(null);
   const [message, setMessage] = useState(null);
   const [success, setSuccess] = useState(true);
 
@@ -49,9 +47,7 @@ export default function App() {
             setPersons(persons.map(person => {
               return person.id !== idToUpdate ? person : response.data;
             }));
-
-            //setSuccessMessage(`Updated number for ${newName}`);
-            
+     
             setSuccess(true);
             setMessage(`Updated number for ${newName}`);
             setNewName('');
