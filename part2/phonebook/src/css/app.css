@@ -1,0 +1,43 @@
+@import-normalize;
+
+.number input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  color: #8b0000;
+}
+
+.number input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  color: #009000;
+}
+
+.person {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.delete-button {
+  margin-left: 10px;
+}
+
+.success-notification {
+  color: green;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error-notification {
+  color: red;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
